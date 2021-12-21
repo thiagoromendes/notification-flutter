@@ -3,9 +3,14 @@ import 'package:notification/models/push_notification.dart';
 import 'package:notification/services/push_notification_service.dart';
 import 'package:provider/provider.dart';
 
-class CardNotification extends StatelessWidget {
+class CardNotification extends StatefulWidget {
   const CardNotification({Key? key}) : super(key: key);
 
+  @override
+  _CardNotificationState createState() => _CardNotificationState();
+}
+
+class _CardNotificationState extends State<CardNotification> {
   void _addNotification(BuildContext context) {
     Provider.of<PushNotificationService>(
       context,
